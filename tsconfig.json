@@ -15,9 +15,5 @@
       "@app/*": ["./src/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "static",
-    "build"
-  ]
+  "exclude": ["node_modules", "static", "build"]
 }

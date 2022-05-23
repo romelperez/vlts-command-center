@@ -35,7 +35,7 @@ root.render(
           css={{
             display: 'block'
           }}
-          href='/'
+          href="/"
         >
           <img
             css={{
@@ -44,7 +44,7 @@ root.render(
               height: '1.5em',
               verticalAlign: 'top'
             }}
-            src='/logo.png'
+            src="/logo.png"
             alt="Voltus' Logo"
           />
         </a>

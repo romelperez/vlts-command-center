@@ -1,6 +1,15 @@
 @font-face {
   font-family: 'Eina';
-  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf437f9f61c6416a858_Eina02-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf47af7d53aae4c8e99_Eina02-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf4bd99cd3a5106d787_Eina02-Regular.woff') format('woff'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf44aa9cd3275711862_Eina02-Regular.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf54aa9cd7c4a711866_Eina02-Regular.svg') format('svg');
+  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf437f9f61c6416a858_Eina02-Regular.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf47af7d53aae4c8e99_Eina02-Regular.eot')
+      format('embedded-opentype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf4bd99cd3a5106d787_Eina02-Regular.woff')
+      format('woff'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf44aa9cd3275711862_Eina02-Regular.ttf')
+      format('truetype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf54aa9cd7c4a711866_Eina02-Regular.svg')
+      format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +17,16 @@
 
 @font-face {
   font-family: 'Eina';
-  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf4f68047355f8cde47_Eina02-SemiBold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf42bf89d65d489b997_Eina02-SemiBold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf46d69a38b449add5b_Eina02-SemiBold.woff') format('woff'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf47cf77e9eff654af6_Eina02-SemiBold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf534ff3339ec657e0d_Eina02-SemiBold.svg') format('svg');
+  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf4f68047355f8cde47_Eina02-SemiBold.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf42bf89d65d489b997_Eina02-SemiBold.eot')
+      format('embedded-opentype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf46d69a38b449add5b_Eina02-SemiBold.woff')
+      format('woff'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf47cf77e9eff654af6_Eina02-SemiBold.ttf')
+      format('truetype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf534ff3339ec657e0d_Eina02-SemiBold.svg')
+      format('svg');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -16,7 +34,26 @@
 
 @font-face {
   font-family: 'Fontello';
-  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d38076ac1997da785afa8c_fontello.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3ff1038671005f29ab_fontello.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d38076a3f1ca677f6883ec_fontello.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f15b357781eb93987_fontello.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d38076df81c01108ec6e66_fontello.woff') format('woff'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f88e6d632eab1624b_fontello.woff') format('woff'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d3807677fcb76b5fd3215a_fontello.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f88f6a6249483db9c_fontello.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d380766d69a32e5b9af9f8_fontello.svg') format('svg'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f639cd0aefdb7aaf8_fontello.svg') format('svg');
+  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d38076ac1997da785afa8c_fontello.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3ff1038671005f29ab_fontello.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d38076a3f1ca677f6883ec_fontello.eot')
+      format('embedded-opentype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f15b357781eb93987_fontello.eot')
+      format('embedded-opentype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d38076df81c01108ec6e66_fontello.woff')
+      format('woff'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f88e6d632eab1624b_fontello.woff')
+      format('woff'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d3807677fcb76b5fd3215a_fontello.ttf')
+      format('truetype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f88f6a6249483db9c_fontello.ttf')
+      format('truetype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d380766d69a32e5b9af9f8_fontello.svg')
+      format('svg'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60f03c3f639cd0aefdb7aaf8_fontello.svg')
+      format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +61,16 @@
 
 @font-face {
   font-family: 'Fontello - Sidebar';
-  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75ba8aecba174e52254_fontello.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75b888727121afe8af7_fontello.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75be2250678b052ff2e_fontello.woff') format('woff'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75be225069a2b52ff2d_fontello.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75b25e4c8d37e2c3c6a_fontello.svg') format('svg');
+  src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75ba8aecba174e52254_fontello.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75b888727121afe8af7_fontello.eot')
+      format('embedded-opentype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75be2250678b052ff2e_fontello.woff')
+      format('woff'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75be225069a2b52ff2d_fontello.ttf')
+      format('truetype'),
+    url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/6102d75b25e4c8d37e2c3c6a_fontello.svg')
+      format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

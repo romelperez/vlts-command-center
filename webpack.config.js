@@ -62,12 +62,15 @@ module.exports = {
       template: path.join(SRC_PATH, 'index.html'),
       filename: path.join(BUILD_PATH, 'index.html')
     }),
-    isProduction && new CopyWebpackPlugin({
-      patterns: [{
-        from: STATIC_PATH,
-        to: BUILD_PATH
-      }]
-    })
+    isProduction &&
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: STATIC_PATH,
+            to: BUILD_PATH
+          }
+        ]
+      })
   ].filter(Boolean),
   devServer: {
     static: [
