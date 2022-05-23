@@ -1,0 +1,27 @@
+{
+  "name": "voltus-command-challenge",
+  "engines": {
+    "node": ">=12.14.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npx webpack-dev-server --hot --inline --config webpack.config.devserver.js"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.1.0",
+    "css-loader": "4.2.0",
+    "eslint": "7.6.0",
+    "eslint-plugin-react": "7.20.5",
+    "style-loader": "1.2.1",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  }
+}
