@@ -53,7 +53,7 @@ module.exports = {
       })
     ],
     alias: {
-      '@app': path.join(process.cwd(), 'app')
+      '@app': path.join(process.cwd(), 'src')
     }
   },
   plugins: [
