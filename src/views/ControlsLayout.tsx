@@ -1,29 +1,24 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { ReactElement } from 'react';
-import Box from '@mui/material/Box';
+import React, { ReactElement, ReactNode } from 'react';
 import Paper from '@mui/material/Paper';
 
-interface ControlsLayoutProps {}
+interface ControlsLayoutProps {
+  children?: ReactNode;
+}
 
 const ControlsLayout = (props: ControlsLayoutProps): ReactElement => {
+  const { children } = props;
+
   return (
-    <Box
+    <Paper
       component="aside"
+      variant="outlined"
+      square
       sx={{
         height: '100%'
       }}
     >
-      <Paper
-        variant="outlined"
-        square
-        sx={{
-          height: '100%'
-        }}
-      >
-        &nbsp;
-      </Paper>
-    </Box>
+      {children}
+    </Paper>
   );
 };
 
