@@ -1,18 +1,27 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 
 interface HeaderLayoutProps {
+  className?: string;
   title?: string;
 }
 
 const HeaderLayout = (props: HeaderLayoutProps): ReactElement => {
-  const { title } = props;
+  const { className, title } = props;
+
+  const sectionTitle = title || 'Dashboard';
+
+  useEffect(() => {
+    window.document.title = `${sectionTitle} | Voltus`;
+  }, [sectionTitle]);
 
   return (
     <AppBar
+      className={className}
       position="static"
       sx={{
         display: 'flex',
@@ -27,15 +36,15 @@ const HeaderLayout = (props: HeaderLayoutProps): ReactElement => {
           flex: 1
         }}
       >
-        {title}
+        {sectionTitle}
       </Typography>
-      <a
+      <Link
         css={{
           display: 'flex',
           alignItems: 'center',
           fontSize: '1.25rem'
         }}
-        href="/"
+        to="/"
       >
         <img
           css={{
@@ -47,7 +56,7 @@ const HeaderLayout = (props: HeaderLayoutProps): ReactElement => {
           src="/logo.png"
           alt="Voltus' Logo"
         />
-      </a>
+      </Link>
     </AppBar>
   );
 };

@@ -1,12 +1,13 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import Box from '@mui/material/Box';
 
 interface ExplorerLayoutProps {
   className?: string;
+  children?: ReactNode;
 }
 
 const ExplorerLayout = (props: ExplorerLayoutProps): ReactElement => {
-  const { className } = props;
+  const { className, children } = props;
   return (
     <Box
       className={className}
@@ -14,9 +15,10 @@ const ExplorerLayout = (props: ExplorerLayoutProps): ReactElement => {
         height: '100%'
       }}
     >
-      &nbsp;
+      {children}
     </Box>
   );
 };
 
+export type { ExplorerLayoutProps };
 export { ExplorerLayout };

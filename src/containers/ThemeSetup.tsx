@@ -5,6 +5,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 const theme = createTheme({
   typography: {
     fontFamily: 'Eina, sans-serif',
+    fontWeightBold: '600',
+    fontWeightMedium: '600',
+    fontWeightRegular: '400',
+    fontWeightLight: '400',
     h1: { fontSize: '1.5rem', fontWeight: 600 },
     h2: { fontSize: '1.25rem', fontWeight: 600 },
     h3: { fontSize: '1.125rem', fontWeight: 600 },

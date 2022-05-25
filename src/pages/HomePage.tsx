@@ -7,8 +7,8 @@ import LinearProgress from '@mui/material/LinearProgress';
 
 import { useOrganizations } from '@app/api/useOrganizations';
 import { MainLayout } from '@app/views/MainLayout';
-import { Header } from '@app/containers/Header';
 import { ControlsLayout } from '@app/views/ControlsLayout';
+import { HeaderLayout } from '@app/views/HeaderLayout';
 
 const HomePageOrganizations = (): ReactElement => {
   const { data: organizations, error } = useOrganizations();
@@ -39,7 +39,7 @@ const HomePageOrganizations = (): ReactElement => {
 const HomePage = (): ReactElement => {
   return (
     <MainLayout
-      header={<Header />}
+      header={<HeaderLayout />}
       aside={
         <ControlsLayout>
           <HomePageOrganizations />

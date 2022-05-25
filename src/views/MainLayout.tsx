@@ -2,16 +2,18 @@ import React, { ReactElement, ReactNode } from 'react';
 import Box from '@mui/material/Box';
 
 interface MainLayoutProps {
+  className?: string;
   header?: ReactNode;
   aside?: ReactNode;
   workspace?: ReactNode;
 }
 
 const MainLayout = (props: MainLayoutProps): ReactElement => {
-  const { header, aside, workspace } = props;
+  const { className, header, aside, workspace } = props;
 
   return (
     <Box
+      className={className}
       sx={(theme) => ({
         position: 'absolute',
         left: 0,
@@ -24,7 +26,7 @@ const MainLayout = (props: MainLayoutProps): ReactElement => {
           'aside main main'
         `,
         gridTemplateRows: 'auto 1fr',
-        gridTemplateColumns: '300px auto',
+        gridTemplateColumns: '350px auto',
         backgroundColor: theme.palette.grey[100]
       })}
     >
