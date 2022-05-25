@@ -4,12 +4,12 @@ import { jsx } from '@emotion/react';
 import { createRoot } from 'react-dom/client';
 
 import { ThemeSetup } from '@app/containers/ThemeSetup';
-import { App } from '@app/containers/App';
+import { Router } from '@app/containers/Router';
 
 const root = createRoot(document.querySelector('#root') as HTMLDivElement);
 
 root.render(
   <ThemeSetup>
-    <App />
+    <Router />
   </ThemeSetup>
 );
