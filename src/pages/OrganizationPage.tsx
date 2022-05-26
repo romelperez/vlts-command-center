@@ -8,6 +8,7 @@ import { MainLayout } from '@app/views/MainLayout';
 import { HeaderLayout } from '@app/views/HeaderLayout';
 import { ControlsLayout } from '@app/views/ControlsLayout';
 import { FacilitiesList } from '@app/views/FacilitiesList';
+import { ExplorerMap } from '@app/views/ExplorerMap';
 
 interface OrganizationPageControlsProps {
   facilities: DataFacility[];
@@ -26,21 +27,20 @@ const OrganizationPage = (): ReactElement => {
     organizationId as string
   );
 
+  const isLoading = !organizationWithFacilities;
   const title = organizationWithFacilities?.name ?? '';
+  const facilities = organizationWithFacilities?.facilities ?? [];
 
   return (
     <MainLayout
       header={<HeaderLayout title={title} />}
       aside={
         <ControlsLayout>
-          {!organizationWithFacilities && <LinearProgress color="secondary" />}
-          {!!organizationWithFacilities && (
-            <OrganizationPageControls
-              facilities={organizationWithFacilities.facilities}
-            />
-          )}
+          {isLoading && <LinearProgress color="secondary" />}
+          {!isLoading && <OrganizationPageControls facilities={facilities} />}
         </ControlsLayout>
       }
+      workspace={!isLoading && <ExplorerMap facilities={facilities} />}
     />
   );
 };
