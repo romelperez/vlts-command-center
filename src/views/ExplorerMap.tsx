@@ -16,6 +16,7 @@ import { fromLonLat } from 'ol/proj';
 import { Circle, Fill, Stroke, Style } from 'ol/style';
 
 import { DataFacility } from '@app/types';
+import { hasFacilityError } from '@app/tools/hasFacilityError';
 
 interface ExplorerMapProps {
   className?: string;
@@ -65,18 +66,20 @@ const ExplorerMap = (props: ExplorerMapProps): ReactElement => {
 
     const facilitiesFeatures = facilities.map((facility) => {
       const [lat, lon] = facility.coord;
+      const hasError = hasFacilityError(facility);
+      const { palette } = theme;
 
       const feature = new Feature({
         geometry: new Point(fromLonLat([lon, lat]))
       });
 
       const stroke = new Stroke({
-        color: theme.palette.primary.main,
+        color: hasError ? palette.error.dark : palette.primary.main,
         width: 2
       });
 
       const fill = new Fill({
-        color: theme.palette.secondary.main
+        color: hasError ? palette.error.light : palette.secondary.main
       });
 
       feature.setStyle(
