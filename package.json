@@ -10,7 +10,8 @@
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress",
     "serve": "serve ./build -p 4000",
     "lint": "prettier --check .",
-    "lint-fix": "prettier --write ."
+    "lint-fix": "prettier --write .",
+    "integration": "npm run lint && npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
