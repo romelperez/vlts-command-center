@@ -5,6 +5,7 @@
     "node": "^16.14"
   },
   "scripts": {
+    "prepare": "husky install",
     "dev": "webpack serve",
     "clean": "rm -rf ./build",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress",
@@ -32,6 +33,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
     "prettier": "^2.6.2",
     "serve": "^13.0.2",
     "style-loader": "^3.3.1",
