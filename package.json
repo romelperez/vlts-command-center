@@ -9,7 +9,7 @@
     "dev": "webpack serve",
     "clean": "rm -rf ./build",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress",
-    "serve": "serve ./build -p 4000",
+    "serve": "serve -p 5000",
     "lint": "prettier --check .",
     "lint-fix": "prettier --write .",
     "integration": "npm run lint && npm run build"
