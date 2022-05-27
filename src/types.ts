@@ -3,6 +3,7 @@ export interface DataFacility {
   name: string;
   coord: [number, number];
   reading?: number;
+  threshold?: number;
   updatedAt?: string;
 }
 

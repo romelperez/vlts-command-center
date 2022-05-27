@@ -1,6 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react';
 import Box from '@mui/material/Box';
-
 interface MainLayoutProps {
   className?: string;
   header?: ReactNode;
@@ -26,13 +25,13 @@ const MainLayout = (props: MainLayoutProps): ReactElement => {
           'aside main main'
         `,
         gridTemplateRows: 'auto 1fr',
-        gridTemplateColumns: '350px auto',
+        gridTemplateColumns: 'minmax(320px, 400px) auto',
         backgroundColor: theme.palette.grey[100]
       })}
     >
       <Box sx={{ gridArea: 'header' }}>{header}</Box>
-      <Box sx={{ gridArea: 'aside' }}>{aside}</Box>
-      <Box sx={{ gridArea: 'main' }}>{workspace}</Box>
+      <Box sx={{ gridArea: 'aside', minHeight: 0 }}>{aside}</Box>
+      <Box sx={{ gridArea: 'main', minHeight: 0 }}>{workspace}</Box>
     </Box>
   );
 };

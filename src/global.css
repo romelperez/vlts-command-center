@@ -1,3 +1,5 @@
+/* TYPEFACES */
+
 @font-face {
   font-family: 'Eina';
   src: url('https://uploads-ssl.webflow.com/60d37c5996587e49ce582e39/60d37cf437f9f61c6416a858_Eina02-Regular.woff2')
@@ -30,4 +32,19 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+}
+
+/* OPEN LAYERS */
+
+.ol-zoom button {
+  margin: 6px 0 6px 6px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  background-color: #002b47;
+  cursor: pointer;
+}
+
+.ol-rotate {
+  display: none;
 }

@@ -33,14 +33,8 @@ const ExplorerMap = (props: ExplorerMapProps): ReactElement => {
 
   useEffect(() => {
     const mapElement = mapElementRef.current as HTMLDivElement;
-
-    const mapView = new View({
-      center: fromLonLat([0, 0]),
-      zoom: 10
-    });
-
+    const mapView = new View();
     const vectorSource = new VectorSource();
-
     const map = new Map({
       target: mapElement,
       layers: [
@@ -100,18 +94,23 @@ const ExplorerMap = (props: ExplorerMapProps): ReactElement => {
       return feature;
     });
 
-    const coords = facilities.map((facility) => facility.coord);
-    const minLat = coords.map((c) => c[0]).reduce((m, c) => Math.min(m, c));
-    const maxLat = coords.map((c) => c[0]).reduce((m, c) => Math.max(m, c));
-    const minLon = coords.map((c) => c[1]).reduce((m, c) => Math.min(m, c));
-    const maxLon = coords.map((c) => c[1]).reduce((m, c) => Math.max(m, c));
-    const facilitiesContainerFeature = new Polygon([
+    vectorSource?.clear();
+    vectorSource?.addFeatures(facilitiesFeatures);
+
+    // Calculate the polygon containing all facilities points.
+    // This polygon is used to initially fit all of the facilities in the map.
+    const lats = facilities.map(({ coord }) => coord[0]);
+    const lons = facilities.map(({ coord }) => coord[1]);
+    const minLat = lats.reduce((m, c) => Math.min(m, c));
+    const maxLat = lats.reduce((m, c) => Math.max(m, c));
+    const minLon = lons.reduce((m, c) => Math.min(m, c));
+    const maxLon = lons.reduce((m, c) => Math.max(m, c));
+
+    const facilitiesContainerPolygon = new Polygon([
       [fromLonLat([minLon, minLat]), fromLonLat([maxLon, maxLat])]
     ]);
 
-    vectorSource?.clear();
-    vectorSource?.addFeatures(facilitiesFeatures);
-    mapView?.fit(facilitiesContainerFeature, {
+    mapView?.fit(facilitiesContainerPolygon, {
       padding: [100, 100, 100, 100]
     });
   }, [facilities]);
