@@ -41,7 +41,8 @@ const FacilityReadingUpdate = (
         Update Reading
       </Typography>
       <FormControl margin="normal" fullWidth>
-        <InputLabel>Facility</InputLabel>
+        {/* InputLabel type error. */}
+        <InputLabel {...({ size: 'small' } as any)}>Facility</InputLabel>
         <Select
           label="Facility"
           size="small"
