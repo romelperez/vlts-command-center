@@ -25,9 +25,11 @@ const HomePageOrganizations = (): ReactElement => {
     <List>
       {organizations.map((organization) => (
         <Link key={organization.id} to={`/organizations/${organization.id}`}>
-          <ListItem>
+          <ListItem dense>
             <ListItemText>
-              <ListItemText>{organization.name}</ListItemText>
+              <ListItemText sx={{ color: 'primary.main' }}>
+                {organization.name}
+              </ListItemText>
             </ListItemText>
           </ListItem>
         </Link>

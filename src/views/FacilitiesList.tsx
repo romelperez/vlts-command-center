@@ -10,6 +10,7 @@ import TableCell from '@mui/material/TableCell';
 
 import { DataFacility } from '@app/types';
 import { formatNumber } from '@app/tools/formatNumber';
+import { hasFacilityError } from '@app/tools/hasFacilityError';
 
 interface FacilitiesListProps {
   className?: string;
@@ -34,25 +35,45 @@ const FacilitiesList = (props: FacilitiesListProps): ReactElement => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {facilities.map((facility) => (
-            <TableRow key={facility.id} hover>
-              <TableCell>{facility.name}</TableCell>
-              <TableCell>
-                {formatNumber((facility.reading ?? 0) * 1000, 'W')}
-              </TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap', wordBreak: 'break-all' }}>
-                {facility.updatedAt
-                  ? formatDate(
-                      new Date(facility.updatedAt),
-                      'yyyy-MM-dd HH:mm:ss'
-                    )
-                  : '--'}
-              </TableCell>
-            </TableRow>
-          ))}
+          {facilities.map((facility) => {
+            const hasError = hasFacilityError(facility);
+            const bgcolor = hasError ? 'error.main' : '';
+            const color = hasError ? 'error.contrastText' : '';
+
+            return (
+              <TableRow
+                key={facility.id}
+                hover={!hasError}
+                sx={{
+                  bgcolor
+                }}
+              >
+                <TableCell sx={{ color }}>{facility.name}</TableCell>
+                <TableCell sx={{ color }}>
+                  {/* "reading" values comes in kilo, so the scale is removed
+                  to properly format it. */}
+                  {formatNumber((facility.reading ?? 0) * 1000, 'W')}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    color,
+                    whiteSpace: 'nowrap',
+                    wordBreak: 'break-all'
+                  }}
+                >
+                  {facility.updatedAt
+                    ? formatDate(
+                        new Date(facility.updatedAt),
+                        'yyyy-MM-dd HH:mm:ss'
+                      )
+                    : '--'}
+                </TableCell>
+              </TableRow>
+            );
+          })}
         </TableBody>
         <TableFooter>
-          <TableRow sx={{ bgcolor: 'secondary.light' }}>
+          <TableRow>
             <TableCell>
               <b>All</b>
             </TableCell>
